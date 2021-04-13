@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="ro.pub.cs.systems.eim.practicaltest01.PracticalTest01MainActivity" >
+
+    <!--> pentru a invoca a doua activitate a trebuit sa adaug acest buton ca legatura
+    intre cele 2 activitati: din prima activitate pot merge in a doua si invers<-->
+    <Button
+        android:id="@+id/navigate_to_secondary_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/navigate_to_secondary_activity" />
+
+    <!-->saveEnabled = "false" pentru ca sistemul Android
+    sa nu restaureze automat starea EditText-urilor dupa oprirea aplicatiei<-->
+    <EditText
+        android:id="@+id/left_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:saveEnabled="false"
+        android:enabled="false"
+        android:inputType="number"
+        android:ems="7"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/navigate_to_secondary_activity"
+        android:gravity="center" />
+
+    <!-->saveEnabled = "false" pentru ca sistemul Android
+    sa nu restaureze automat starea EditText-urilor dupa oprirea aplicatiei<-->
+    <EditText
+        android:id="@+id/right_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:saveEnabled="false"
+        android:enabled="false"
+        android:inputType="number"
+        android:ems="7"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/navigate_to_secondary_activity"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/press_me_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/left_edit_text"
+        android:layout_below="@id/left_edit_text"
+        android:layout_alignRight="@id/left_edit_text"
+        android:text="@string/press_me" />
+
+    <Button
+        android:id="@+id/press_me_too_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/right_edit_text"
+        android:layout_alignRight="@id/right_edit_text"
+        android:layout_below="@id/right_edit_text"
+        android:text="@string/press_me_too" />
+
+</RelativeLayout>
